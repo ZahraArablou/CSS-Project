@@ -1,0 +1,107 @@
+/* Pure CSS/HTML Game of Group 7 */
+/* Contributor: Zahra ARABLOU, Chunmei LIU, Ying LUO */
+
+body{
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  text-transform: uppercase;
+  background-image: url(../images/back.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a:link {color: white;}
+a:visited {color: lightskyblue;}
+a:hover {color: lightseagreen;}
+a:active {color: silver;}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer{
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 4%;
+}
+
+.welcome{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: rotate(-30deg);
+    letter-spacing: 3px;
+    animation: font 3s alternate infinite;
+}
+
+.right{
+  left: 80%;
+  transform: rotate(30deg);
+}
+
+@keyframes font {
+  0% {
+     font-size: 1px; }
+  100% {
+      font-size: 40px;
+      }
+}
+
+#road {
+ width: 100%;
+ height: 10px;
+ position: absolute;
+ left: 0;
+ top: 80%;
+ background-color: rgb(185, 19, 136);
+ }
+
+ #runner {
+  background: url("../images/spritestrip-adam.png");
+  width: 256px;
+  height: 250px;
+  position: absolute;
+  bottom: 100%;
+  animation: walk 1s steps(6) infinite, forward 10s linear infinite;
+}
+
+@keyframes walk {
+  0% { background-position: 1536px;}
+  100% {background-position:0px;}
+}
+@keyframes forward {
+  0% { transform: translateX(10%);
+  }
+  100% { transform: translateX(600%);
+  }
+}
+
+span {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  padding: 2% 4%;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  background-color: rgb(185, 19, 136);
+  box-shadow: rgb(54, 54, 110) 2px 4px;
+  border-radius: 5%;
+}
+
+span:hover {
+  background-color: rgb(167, 39, 39, 0.6);
+ animation: rotate 7s linear infinite forwards;
+}
+
+@keyframes  rotate {
+  0% { transform: rotateY(0deg); box-shadow: rgb(167, 39, 39) 2px 4px;
+  }
+  100% {transform: rotateY(360deg); box-shadow:rgb(167, 39, 39) 2px 4px;
+  }
+}
